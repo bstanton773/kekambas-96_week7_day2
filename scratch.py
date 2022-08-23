@@ -45,3 +45,8 @@ print(fruits[1:3])
 fruits.insert(2, 'stawberry')
 
 print(fruits)
+
+a_dict = {}
+
+a_dict['key'] = 1
+a_dict['key2'] = {'a': 123}
