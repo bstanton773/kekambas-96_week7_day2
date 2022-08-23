@@ -26,3 +26,14 @@ def total_positive(a_list):
 
 print(total_positive([2, 4, -23, 23, -4, 12]))
 
+
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+
+list3 = list1 + list2
+print(list3)
+
+
+fruits = ['orange', 'apple', 'banana', 'pear']
+print('mango' in fruits)
+
