@@ -106,9 +106,93 @@ let myConcatArr = arrA.concat([4, 5, 6], [9, 8, 7], [34, 56, 78])
 console.log(myConcatArr);
 
 // Array.prototype.includes()
-let fruits = ['orange', 'apple', 'banana', 'pear'];
+let fruits = ['orange', 'apple', 'banana', 'pear', 'banana'];
 
 console.log(fruits.includes('apple'));
 console.log(fruits.includes('mango'));
 console.log('orange' in fruits);
 console.log('2' in fruits);
+
+
+// Array.prototype.indexOf()
+console.log(fruits.indexOf('banana'));
+console.log(fruits.indexOf('cantaloupe'));
+
+
+// Array.protoype.join()
+let myArrName = ['B', 'r', 'i', 'a', 'n']
+
+console.log(myArrName.join(''))
+console.log(myArrName.join('-'))
+
+
+// Array.prototype.push() *equivalent to list.append in python
+console.log(fruits.push('peach', 'kiwi'));
+console.log(fruits);
+
+// Array.prototype.pop()
+const lastElement = fruits.pop();
+console.log(lastElement);
+console.log(fruits);
+
+fruits.reverse();
+console.log(fruits);
+fruits.reverse();
+console.log(fruits);
+
+
+// Array.prototype.slice()
+console.log('Array slice:')
+console.log(fruits);
+console.log(fruits.slice()) // fruits[:] in python
+console.log(fruits.slice(2)); // fruits[2:] in python
+console.log(fruits.slice(2, 5)); // fruits[2:5] in python
+console.log(fruits.slice(0, -1))
+
+
+// Array.prototype.splice()
+console.log('Array Splice:');
+console.log(fruits);
+fruits.splice(2, 0, 'strawberry');
+console.log(fruits);
+
+
+let newExample = [1,2,4,5]
+newExample.splice(2, 1, 3, 7, 8, 9)
+console.log(newExample)
+
+
+// Array.prototype.sort()
+let unsorted = [23, 10, -10, 3, 5, -7];
+console.log('SORT:')
+console.log(unsorted);
+
+
+unsorted.sort();
+console.log(unsorted);
+
+
+let newUnsorted = [9, 80, 34, -4, 4, 15]
+
+function compareFunc(a, b){
+    console.log('A:', a, 'B:', b)
+    if (a > b){
+        return 1
+    } else if (b > a){
+        return -1
+    } else {
+        return 0
+    }
+}
+
+console.log(newUnsorted);
+newUnsorted.sort(compareFunc);
+console.log(newUnsorted);
+
+
+// to sort by number value
+let anotherUnsorted = [34, 7, 2, 12, 54, 1234, 98]
+
+console.log(anotherUnsorted)
+anotherUnsorted.sort((a,b) => a-b)
+console.log(anotherUnsorted)
